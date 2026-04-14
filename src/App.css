@@ -1,3 +1,46 @@
+/* ── Shore arrival overlay ──────────────────────────────── */
+@keyframes arrivalFadeIn {
+  0%   { opacity: 0; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1);    }
+}
+
+/* ── Coconut water drink / slash effects ────────────────── */
+@keyframes coconutDrink {
+  0%   { opacity: 0;    transform: scale(0.85); }
+  12%  { opacity: 0.55; transform: scale(1.00); }
+  55%  { opacity: 0.22; transform: scale(1.06); }
+  100% { opacity: 0;    transform: scale(1.14); }
+}
+
+@keyframes coconutPop {
+  0%   { transform: scale(1);    }
+  35%  { transform: scale(1.75); }
+  65%  { transform: scale(0.90); }
+  100% { transform: scale(1);    }
+}
+
+/* Main coconut icon bounce */
+@keyframes coconutSlash {
+  0%   { transform: scale(1)   rotate(0deg);  opacity: 1; }
+  20%  { transform: scale(1.4) rotate(-10deg); }
+  55%  { transform: scale(1.15) rotate(4deg); opacity: 1; }
+  100% { transform: scale(0.6) rotate(6deg);  opacity: 0; }
+}
+
+/* Slash line draws across */
+@keyframes slashLine {
+  0%   { transform: rotate(-32deg) translateY(-50%) scaleX(0); opacity: 1; }
+  28%  { transform: rotate(-32deg) translateY(-50%) scaleX(1); opacity: 1; }
+  75%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* Water drop flies outward (parent rotated to set direction) */
+@keyframes waterDropFly {
+  0%   { transform: translateY(0)     scale(1);   opacity: 1; }
+  100% { transform: translateY(-34px) scale(0.1); opacity: 0; }
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

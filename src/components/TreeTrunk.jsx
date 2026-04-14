@@ -31,26 +31,25 @@ export default function TreeTrunk({
     texture.needsUpdate = true
     return texture
   }, [trunkTexture])
-
   return (
     <group position={position}>
-      {/* Core trunk */}
+      {/* Core trunk: 單一圓柱，沒有分節 */}
       <mesh castShadow receiveShadow>
         <cylinderGeometry args={[radiusTop, radiusBottom, height, radialSegments]} />
         <meshStandardMaterial map={trunkMapA} roughness={0.95} metalness={0} />
       </mesh>
 
-      {/* Thin outer bark shell to break visible seams */}
+      {/* 外層樹皮薄殼，減少貼圖接縫感 */}
       <mesh rotation={[0, Math.PI / 9, 0]} castShadow receiveShadow>
         <cylinderGeometry
-          args={[radiusTop * 1.03, radiusBottom * 1.03, height * 0.995, radialSegments + 8]}
+          args={[radiusTop * 1.03, radiusBottom * 1.03, height * 0.995, radialSegments + 4]}
         />
         <meshStandardMaterial
           map={trunkMapB}
           roughness={0.98}
           metalness={0}
           transparent
-          opacity={0.92}
+          opacity={0.9}
         />
       </mesh>
     </group>

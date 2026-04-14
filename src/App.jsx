@@ -1,13 +1,11 @@
 
-import './App.css'
-import Scene from "./Scene"
+import "./App.css"
+import VocabularySceneWrapper from "./VocabularySceneWrapper"
 
 function App() {
-  
-
   return (
     <>
-      <Scene />
+      <VocabularySceneWrapper />
     </>
   )
 }

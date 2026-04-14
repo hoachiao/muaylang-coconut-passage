@@ -10,8 +10,8 @@ export default function CoconutLeaf({
   size = [2, 0.2, 4.4],
 }) {
   const leafTexture = useTexture("/coconutLeaf.png")
-  const width = size[0]
-  const length = size[2]
+  const width = size[2]
+  const length = size[5]
 
   return (
     <mesh
